@@ -38,7 +38,7 @@ public class ApplicationController {
 		return application.get();
 	}
 	
-	@RequestMapping("/applictions/{id}")
+	@RequestMapping("/applications/{id}")
 	public void deleteApplication(@PathVariable long id) {
 		applicationRepository.deleteById(id);
 	}
