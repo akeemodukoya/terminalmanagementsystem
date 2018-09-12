@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContextException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,10 +25,14 @@ public class ApplicationController {
 	
 	
 	@RequestMapping("/applications")
-	public List<Application> retrieveAllApplications(@PathVariable int id) {
- 
-		return applicationRepository.findAll();
+	public String application(Model model) {
+		model.addAttribute("", "");
+		return "task";
 	}
+//	public List<Application> retrieveAllApplications(@PathVariable int id) {
+// 
+//		return applicationRepository.findAll();
+//	}
 	
 	@RequestMapping("/applications/{id}")
 	public Application retrieveApplication(@PathVariable long id) {
