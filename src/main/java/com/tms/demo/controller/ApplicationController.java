@@ -25,7 +25,7 @@ public class ApplicationController {
 	
 	@RequestMapping("/applications")
 	public List<Application> retrieveAllApplications(@PathVariable int id) {
-		ModelAndView 
+//		ModelAndView 
 		return applicationRepository.findAll();
 	}
 	
