@@ -1,5 +1,10 @@
 package com.tms.demo.service;
 
-public class TmsService {
+import java.util.List;
 
+import com.tms.demo.model.Application;
+
+public interface TmsService {
+	
+	List<Application> findAllApplications();
 }
