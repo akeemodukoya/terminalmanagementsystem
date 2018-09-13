@@ -5,12 +5,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/projects")
 public class ProjectController {
 	
 	@RequestMapping("/projects")
-	public String projects(Model model) {
+	public String project(Model model) {
 		model.addAttribute("","");
-		return "typography";
+		return "ui-typography";
 	}
 }
