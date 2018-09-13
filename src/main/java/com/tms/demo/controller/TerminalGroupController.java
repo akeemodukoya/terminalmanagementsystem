@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TerminalGroupController {
 	@RequestMapping("/terminalgroups")
 	public String terminalGroups(Model model) {
-		model.addAttribute(",");
+		model.addAttribute("","");
 		return "other-user-listing";
 	}
 }

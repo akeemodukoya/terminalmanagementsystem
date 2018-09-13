@@ -10,7 +10,7 @@ public class TerminalController {
 	
 	@RequestMapping("/terminals")
 	public String terminal(Model model) {
-		model.addAttribute(",");
+		model.addAttribute("","");
 		return "activity";
 	}
 	

@@ -10,7 +10,7 @@ public class ProjectController {
 	
 	@RequestMapping("/projects")
 	public String projects(Model model) {
-		model.addAttribute(",");
+		model.addAttribute("","");
 		return "typography";
 	}
 }

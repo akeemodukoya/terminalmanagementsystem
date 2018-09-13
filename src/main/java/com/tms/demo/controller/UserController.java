@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserController {
 	@RequestMapping("/users")
 	public String users(Model model) {
-		model.addAttribute(".");
+		model.addAttribute("","");
 		return "table";
 	}
 }
