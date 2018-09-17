@@ -13,11 +13,21 @@ public interface TmsService {
 	
 	public List<Application> findAllApplications();
 	
+	public Application findApplicaitonById(int id);
+	
 	public List<Project> findAllProjects();
+	
+	public Project findProjectById(int id);
 	
 	public List<Terminal> findAllTerminals();
 	
+	public Terminal findByTerminalId(int id);
+	
 	public List<TerminalGroup> findAllTerminalGroups();
 	
+	public TerminalGroup findByTerminalGroupId(int id);
+	
 	public List<User> findAllUsers();
+	
+	public User findById(int id);
 }

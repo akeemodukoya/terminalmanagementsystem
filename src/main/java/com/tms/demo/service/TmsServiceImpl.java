@@ -67,6 +67,36 @@ public class TmsServiceImpl implements TmsService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Application findApplicaitonById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Project findProjectById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Terminal findByTerminalId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TerminalGroup findByTerminalGroupId(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public User findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	
