@@ -97,6 +97,36 @@ public class TmsServiceImpl implements TmsService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public void SaveApplication(Application application) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SaveProject(Project project) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SaveTerminal(Terminal terminal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SaveTerminalGroup(TerminalGroup terminalGroup) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void SaveUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
