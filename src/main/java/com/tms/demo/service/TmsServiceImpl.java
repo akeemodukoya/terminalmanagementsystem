@@ -47,13 +47,13 @@ public class TmsServiceImpl implements TmsService{
 	@Override
 	public List<Project> findAllProjects() {
 		// TODO Auto-generated method stub
-		return null;
+		return (List<Project>) projectRepository.findAll();
 	}
 
 	@Override
 	public List<Terminal> findAllTerminals() {
 		// TODO Auto-generated method stub
-		return null;
+		return (List<Terminal>) terminalRepository.findAll();
 	}
 
 	@Override
@@ -65,7 +65,7 @@ public class TmsServiceImpl implements TmsService{
 	@Override
 	public List<User> findAllUsers() {
 		// TODO Auto-generated method stub
-		return null;
+		return (List<User>) userRepository.findAll();
 	}
 
 	@Override

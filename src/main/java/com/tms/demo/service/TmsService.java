@@ -13,7 +13,7 @@ public interface TmsService {
 	
 	public List<Application> findAllApplications();
 	
-	public Application findAllApplications(int id);
+	public Application findApplicationById(int id);
 	
 	public void SaveApplication(Application application);
 	
