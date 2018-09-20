@@ -41,7 +41,7 @@ public class TmsServiceImpl implements TmsService{
 	@Override
 	public List<Application> findAllApplications() {
 		// TODO Auto-generated method stub
-		return null;
+		return (List<Application>) applicationRepository.findAll();
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class TmsServiceImpl implements TmsService{
 	@Override
 	public List<TerminalGroup> findAllTerminalGroups() {
 		// TODO Auto-generated method stub
-		return null;
+		return (List<TerminalGroup>) terminalGroupRepository.findAll();
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class TmsServiceImpl implements TmsService{
 	}
 
 	@Override
-	public Application findApplicaitonById(int id) {
+	public Application findApplicationById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
