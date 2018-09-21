@@ -11,4 +11,10 @@ public class TerminalGroupController {
 		model.addAttribute("","");
 		return "other-user-listing";
 	}
+	
+//	@RequestMapping("/terminalgroups/{id}")
+//	public String terminalgroup(Model model) {
+//		model.addAttribute("","");
+//		return "";
+//	}
 }
