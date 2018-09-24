@@ -16,9 +16,14 @@ public class TerminalController {
 		this.tmsService = tmsService;
 	}
 	@RequestMapping("/terminals")
-	public String terminal(Model model) {
+	public String terminals(Model model) {
 		model.addAttribute("terminals", tmsService.findAllTerminals());
 		return "activity";
 	}
 	
+	@RequestMapping("/terminals/{id}")
+	public String terminal(Model model) {
+		model.addAttribute("terminal", tmsService.findByTerminalId());
+		return "";
+	}
 }
