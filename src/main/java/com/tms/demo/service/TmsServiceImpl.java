@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
+//import org.springframework.web.bind.annotation.PathVariable;
 
 import com.tms.demo.model.Application;
 import com.tms.demo.model.Project;
@@ -101,31 +101,31 @@ public class TmsServiceImpl implements TmsService{
 	@Override
 	public void SaveApplication(Application application) {
 		// TODO Auto-generated method stub
-		
+		applicationRepository.save(application);
 	}
 
 	@Override
 	public void SaveProject(Project project) {
 		// TODO Auto-generated method stub
-		
+		projectRepository.save(project);
 	}
 
 	@Override
 	public void SaveTerminal(Terminal terminal) {
 		// TODO Auto-generated method stub
-		
+		terminalRepository.save(terminal);
 	}
 
 	@Override
 	public void SaveTerminalGroup(TerminalGroup terminalGroup) {
 		// TODO Auto-generated method stub
-		
+		terminalGroupRepository.save(terminalGroup);
 	}
 
 	@Override
 	public void SaveUser(User user) {
 		// TODO Auto-generated method stub
-		
+		userRepository.save(user);
 	}
 	
 	
