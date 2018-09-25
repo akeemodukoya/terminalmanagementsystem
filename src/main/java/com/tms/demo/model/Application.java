@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import org.hibernate.annotations.Table;
 
 @Entity
-@Table( appliesTo = "app")
+@Table( appliesTo = "apps")
 public class Application {
 	@Id
 	@GeneratedValue

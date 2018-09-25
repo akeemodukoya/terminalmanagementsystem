@@ -81,9 +81,9 @@ public class TmsServiceImpl implements TmsService{
 	}
 
 	@Override
-	public Terminal findByTerminalId(int id) {
+	public Terminal findByTerminalId() {
 		// TODO Auto-generated method stub
-		return ((TmsService) terminalRepository).findByTerminalId(id);
+		return ((TmsService) terminalRepository).findByTerminalId();
 	}
 
 	@Override

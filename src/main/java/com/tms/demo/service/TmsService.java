@@ -25,7 +25,7 @@ public interface TmsService {
 	
 	public List<Terminal> findAllTerminals();
 	
-	public Terminal findByTerminalId(int id);
+	public Terminal findByTerminalId();
 	
 	public void SaveTerminal(Terminal terminal);
 	
