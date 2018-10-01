@@ -134,10 +134,11 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr class="odd gradeX">
+<!--                                             <tr th:if="${not #applications.isEmpty}" class="odd gradeX">
                                                 <td colspan="4">
+                                                    No applications available
                                                 </td>
-                                            </tr>
+                                            </tr> -->
                                             <tr th:each="application : ${applications}" class="even gradeC">
                                                 <td th:text="|$application.name|">
                                                     [name]

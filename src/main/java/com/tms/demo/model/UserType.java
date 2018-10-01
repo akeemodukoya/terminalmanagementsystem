@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import org.hibernate.annotations.Table;
 
 @Entity
-@Table(appliesTo="user_types")
+//@Table(appliesTo="user_types")
 public class UserType {
 	@Id
 	@GeneratedValue
