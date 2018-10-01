@@ -13,9 +13,9 @@ public class Project {
 	@GeneratedValue
 	private Integer id;
 	private String name;
-	
-	public Project() {
-		
+
+	public Project(String name) {
+		this.name = name;
 	}
 
 	public Integer getId() {

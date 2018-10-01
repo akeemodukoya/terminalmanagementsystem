@@ -18,8 +18,15 @@ public class TerminalGroup {
 	private String partition_size;
 	private String upgrade_type;
 	
-	public TerminalGroup() {
-		
+	
+
+	public TerminalGroup(String application, String name, Integer terminal_id, String partition_size,
+			String upgrade_type) {
+		this.application = application;
+		this.name = name;
+		this.terminal_id = terminal_id;
+		this.partition_size = partition_size;
+		this.upgrade_type = upgrade_type;
 	}
 
 	public Integer getId() {

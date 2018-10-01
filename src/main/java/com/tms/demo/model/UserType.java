@@ -14,8 +14,9 @@ public class UserType {
 	private Integer id;
 	private String name;
 	
-	public UserType() {
-		
+	
+	public UserType(String name) {
+		this.name = name;
 	}
 
 	public Integer getId() {

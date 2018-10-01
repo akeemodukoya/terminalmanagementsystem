@@ -14,8 +14,10 @@ public class Terminal {
 	private Integer id;
 	private String serial_number;
 	
-	public Terminal() {
-		
+	
+
+	public Terminal(String serial_number) {
+		this.serial_number = serial_number;
 	}
 
 	public Integer getId() {
