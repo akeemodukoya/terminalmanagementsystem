@@ -16,11 +16,13 @@ public class Application {
 	private String file;
 	private String version;
 	
-	public Application() {
-		
+	public Application( String name, String file, String version) {
+		this.name = name;
+		this.file = file;
+		this.version = version;
 	}
-	
-	
+
+
 	public String getVersion() {
 		return version;
 	}
