@@ -3,11 +3,12 @@ package com.tms.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Table;
 
 @Entity
-//@Table( appliesTo = "app")
+@Table( appliesTo = "application")
 public class Application {
 	@Id
 	@GeneratedValue
@@ -15,6 +16,9 @@ public class Application {
 	private String name;
 	private String file;
 	private String version;
+	
+	@ManyToOne
+	private Application application;
 	
 	public Application( String name, String file, String version) {
 		this.name = name;

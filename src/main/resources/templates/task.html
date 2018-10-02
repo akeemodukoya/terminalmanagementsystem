@@ -45,11 +45,11 @@
 											<td class="cell-status hidden-phone hidden-tablet">Uploaded by</td>
 											<td class="cell-time align-right">Actions</td>
 										</tr>
-										<tr class="task resolved">
+										<tr th:each="application : ${applications}" class="task resolved">
 											<td class="cell-icon"><i class="icon-checker high"></i></td>
-											<td class="cell-title"><div>Lorem ipsum dolor sit et</div></td>
-											<td class="cell-status hidden-phone hidden-tablet"><b class="due">Missed</b></td>
-											<td class="cell-time align-right">Just Now</td>
+											<td th:text="|$application.name|" class="cell-title"><div>[name]</div></td>
+											<td th:text="|$application.version|"class="cell-status hidden-phone hidden-tablet"><b class="due">[version]</b></td>
+											<td th:text="|$application.user.name|" class="cell-time align-right">[application.user.name]</td>
 										</tr><!-- 
 										<tr class="task">
 											<td class="cell-icon"><i class="icon-checker"></i></td>

@@ -3,17 +3,20 @@ package com.tms.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Table;
 
 @Entity
-//@Table(appliesTo="user_types")
+@Table(appliesTo="user_type")
 public class UserType {
 	@Id
 	@GeneratedValue
 	private Integer id;
 	private String name;
 	
+	@ManyToOne
+	private User user;
 	
 	public UserType(String name) {
 		this.name = name;
