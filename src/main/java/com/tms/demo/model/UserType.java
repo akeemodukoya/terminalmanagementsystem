@@ -3,7 +3,8 @@ package com.tms.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+//import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Table;
 
@@ -15,7 +16,7 @@ public class UserType {
 	private Integer id;
 	private String name;
 	
-	@ManyToOne
+	@OneToMany
 	private User user;
 	
 	public UserType(String name) {

@@ -3,6 +3,7 @@ package com.tms.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Table;
 
@@ -14,7 +15,8 @@ public class Terminal {
 	private Integer id;
 	private String serial_number;
 	
-	
+	@ManyToOne
+	private TerminalGroup terminalGroup;
 
 	public Terminal(String serial_number) {
 		this.serial_number = serial_number;
