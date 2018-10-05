@@ -1,12 +1,15 @@
 package com.tms.demo.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Table;
 
@@ -21,11 +24,11 @@ public class User {
 	private String last_name;
 	
 	@ManyToOne
-	private Application application;
+	private Application applications;
 	
-	@OneToMany(cascade = CascadeType.ALL)
-	@JoinColumn(name="project_id")
-	private Project project;
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//	@JoinColumn(name = "project_id")
+	private Set<Project> project = new HashSet<>();
 
 	public User(String email, String first_name, String last_name) {
 		this.email = email;

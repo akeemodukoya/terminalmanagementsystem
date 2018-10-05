@@ -14,6 +14,7 @@ public class Project {
 	private Integer id;
 	private String name;
 
+	
 	public Project(String name) {
 		this.name = name;
 	}
