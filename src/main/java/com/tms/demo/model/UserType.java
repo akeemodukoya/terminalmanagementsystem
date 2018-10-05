@@ -4,7 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 //import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+//import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Table;
 
@@ -16,8 +16,8 @@ public class UserType {
 	private Integer id;
 	private String name;
 	
-	@OneToMany
-	private User user;
+//	@OneToMany
+//	private User user;
 	
 	public UserType(String name) {
 		this.name = name;

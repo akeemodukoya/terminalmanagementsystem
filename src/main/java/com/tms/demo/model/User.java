@@ -1,8 +1,10 @@
 package com.tms.demo.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -21,7 +23,8 @@ public class User {
 	@ManyToOne
 	private Application application;
 	
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinColumn(name="project_id")
 	private Project project;
 
 	public User(String email, String first_name, String last_name) {
