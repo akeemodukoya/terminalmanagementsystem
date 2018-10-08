@@ -19,8 +19,8 @@ public class TerminalGroup {
 	private String partition_size;
 	private String upgrade_type;
 	
-	@ManyToOne
-	private Terminal terminal;
+//	@ManyToOne
+//	private Terminal terminal;
 
 	public TerminalGroup(String application, String name, Integer terminal_id, String partition_size,
 			String upgrade_type) {
