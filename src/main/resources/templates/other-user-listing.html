@@ -1,514 +1,88 @@
 ﻿
 <body>
-  <div class="" th:include="fragments/navSidebar" th:remove="tag"></div>
 
-                <!--/.span3-->
+
+<div class="" th:include="fragments/navSidebar" th:remove="tag"></div>
+
+
+
                 <div class="span9">
                     <div class="content">
-                        <div class="module">
+
+                        <div class="module message">
                             <div class="module-head">
-                                <h3>
-                                    Terminal Groups</h3>
+                                <h3>Terminal Groups</h3>
                             </div>
                             <div class="module-option clearfix">
-                                <form>
-                                <div class="input-append pull-left">
-                                    <input type="text" class="span3" placeholder="Filter by name...">
-                                    <button type="submit" class="btn">
-                                        <i class="icon-search"></i>
-                                    </button>
+                                <div class="pull-left">
+                                    Filter : &nbsp;
+                                    <div class="btn-group">
+                                        <button class="btn">All</button>
+                                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">All</a></li>
+                                            <li><a href="#">In Progress</a></li>
+                                            <li><a href="#">Done</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">New task</a></li>
+                                            <li><a href="#">Overdue Task</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                </form>
-                                <div class="btn-group pull-right" data-toggle="buttons-radio">
-                                    <button type="button" class="btn">
-                                        All</button>
-                                    <button type="button" class="btn">
-                                        Male</button>
-                                    <button type="button" class="btn">
-                                        Female</button>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-primary">Create Terminal Group</a>
                                 </div>
                             </div>
-                            <div class="module-body">
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga
-                                                </h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="row-fluid">
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    John Donga</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="span6">
-                                        <div class="media user">
-                                            <a class="media-avatar pull-left" href="#">
-                                                <img src="images/user.png">
-                                            </a>
-                                            <div class="media-body">
-                                                <h3 class="media-title">
-                                                    Donga John</h3>
-                                                <p>
-                                                    <small class="muted">Pakistan</small></p>
-                                                <div class="media-option btn-group shaded-icon">
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-envelope"></i>
-                                                    </button>
-                                                    <button class="btn btn-small">
-                                                        <i class="icon-share-alt"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.row-fluid-->
-                                <br />
-                                <div class="pagination pagination-centered">
-                                    <ul>
-                                        <li><a href="#"><i class="icon-double-angle-left"></i></a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#"><i class="icon-double-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
+                            <div class="module-body table">                             
+
+                                <table class="table table-message">
+                                    <tbody>
+                                        <tr class="heading">
+                                            <td class="cell-icon">Terminal Group</td>
+                                            <td class="cell-title">Partition Size</td>
+                                            <td class="cell-status hidden-phone hidden-tablet">Created by</td>
+                                            <td class="cell-time align-right">Upgrade Type</td>
+                                        </tr>
+                                        <tr th:each="terminal_group : ${terminal_groups}" class="task resolved">
+                                            <td class="cell-icon"><i class="icon-checker high"></i></td>
+                                            <td th:text="|$terminal_group.name|" class="cell-title"><div>[name]</div></td>
+                                            <td th:text="|$terminal_group.partition_size|"class="cell-status hidden-phone hidden-tablet"><b class="due">[partition_size]</b></td>
+                                            <td th:text="|$terminal_group.upgrade_type|" class="cell-time align-right">[upgrade_type]</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+                            <div class="module-foot">
                             </div>
                         </div>
-                    </div>
-                    <!--/.content-->
-                </div>
-                <!--/.span9-->
+                        
+                    </div><!--/.content-->
+                </div><!--/.span9-->
             </div>
+        </div><!--/.container-->
+    </div><!--/.wrapper-->
+
+    <div class="footer">
+        <div class="container">
+             
+
         </div>
-        <!--/.container-->
     </div>
-    <!--/.wrapper-->
+
     <div th:include="fragments/footer" class="" th:remove="tag"></div>
+    <script src="scripts/datatables/jquery.dataTables.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.table-message tbody tr').click(
+                function() 
+                {
+                    $(this).toggleClass('resolved');
+                }
+            );
+        } );
+    </script>
 </body>
