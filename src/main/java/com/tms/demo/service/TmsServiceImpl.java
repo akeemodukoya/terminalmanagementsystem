@@ -3,6 +3,7 @@ package com.tms.demo.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 //import org.springframework.web.bind.annotation.PathVariable;
 
@@ -126,6 +127,36 @@ public class TmsServiceImpl implements TmsService{
 	public void SaveUser(User user) {
 		// TODO Auto-generated method stub
 		userRepository.save(user);
+	}
+
+	@Override
+	public long count(Application application) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long count(Project project) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long count(Terminal terminal) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long count(TerminalGroup terminalGroup) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public long count(User user) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 	
