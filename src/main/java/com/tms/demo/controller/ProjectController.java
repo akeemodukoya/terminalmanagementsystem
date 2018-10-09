@@ -21,4 +21,9 @@ public class ProjectController {
 		model.addAttribute("projects", tmsService.findAllProjects());
 		return "ui-typography";
 	}
+	
+	@RequestMapping("/projects/{id}")
+	public void delete(){
+		
+	}
 }

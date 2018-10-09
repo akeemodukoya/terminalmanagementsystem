@@ -39,10 +39,10 @@ public class ApplicationController {
 //		return application.get();
 //	}
 //	
-//	@RequestMapping("/application/{id}")
-//	public void deleteApplication(@PathVariable long id) {
-//		applicationRepository.deleteById(id);
-//	}
+	@RequestMapping("/application/{id}")
+	public void delete() {
+	
+	}
 //	
 //	@RequestMapping("/application")
 //	public ResponseEntity<Object> createApplication(@RequestBody Application application) {

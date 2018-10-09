@@ -11,4 +11,9 @@ public class UserController {
 		model.addAttribute("","");
 		return "table";
 	}
+	
+	@RequestMapping("/users/{id}")
+	public void delete() {
+		
+	}
 }

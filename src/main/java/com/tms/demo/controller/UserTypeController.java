@@ -11,4 +11,9 @@ public class UserTypeController {
 		model.addAttribute("","");
 		return "other-user-listing";
 	}
+	
+	@RequestMapping("/usertypes/{id}")
+	public void delete() {
+		
+	}
 }

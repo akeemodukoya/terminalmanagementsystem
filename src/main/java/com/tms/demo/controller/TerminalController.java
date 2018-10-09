@@ -26,4 +26,9 @@ public class TerminalController {
 		model.addAttribute("terminal", tmsService.findByTerminalId());
 		return "";
 	}
+	
+	@RequestMapping("/terminals/{id}")
+	public void delete() {
+		
+	}
 }
