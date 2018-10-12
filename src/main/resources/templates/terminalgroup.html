@@ -11,7 +11,7 @@
 						<div class="control-group">
 							<label class="control-label" for="basicinput">Application</label>
 							<div class="controls">
-								<input type="text" id="basicinput" th:field="*{application_id}" placeholder="Type something here..." class="span8">
+								<input type="text" id="basicinput"  placeholder="Type something here..." class="span8">
 								<span class="help-inline">Minimum 5 Characters</span>
 							</div>
 						</div>
@@ -28,14 +28,20 @@
 							</div>
 						</div>
 						<div class="control-group">
-							<label for="basicinput" class="control-label"></label>
+							<label for="basicinput" class="control-label">Upgrade type</label>
 							<div class="controls">
-								<input type="file" th:field="*{file}" id="basicinput" class="span8">
+								<input type="text" th:field="*{upgrade_type}" id="basicinput" class="span8">
+							</div>
+						</div>
+						<div class="control-group">
+							<label for="basicinput" class="control-label">Application</label>
+							<div class="controls">
+								<input type="text"  id="basicinput" class="span8">
 							</div>
 						</div>
 						<div class="control-group">
 							<div class="controls">
-								<button type="submit" class="btn btn-primary">Upload Application</button>
+								<button type="submit" class="btn btn-primary">Create Terminal Group</button>
 							</div>
 						</div>
 					</form>

@@ -18,7 +18,7 @@ public class TerminalGroupController {
 	
 	@RequestMapping(value="/terminalgroup", method = RequestMethod.GET)
 	public String terminalGroupFrom(Model model) {
-		model.addAttribute("terminalGroup", new TerminalGroup(null, null, null, null, null));
+		model.addAttribute("terminalgroup", new TerminalGroup(null, null, null, null, null));
 		return "terminalgroup";
 	}
 	
@@ -26,6 +26,7 @@ public class TerminalGroupController {
 	public String terminalGroupSubmit(@ModelAttribute TerminalGroup terminalGroup) {
 		return "terminalgroupresult";
 	}
+	
 	@RequestMapping("/terminalsgroups/{id}")
 	public void delete() {
 		
