@@ -11,13 +11,22 @@
 								<input type="text" id="basicinput" th:field="*{name}" placeholder="Type something here..." class="span8">
 								<span class="help-inline">Minimum 5 Characters</span>
 							</div>
+						</div>
+						<div class="control-group">
 							<label for="basicinput" class="control-label">Version</label>
 							<div class="controls">
 								<input type="text" id="basicinput" th:field="*{version}" placeholder="Version" class="span8">
 							</div>
+						</div>
+						<div class="control-group">
 							<label for="basicinput" class="control-label"></label>
 							<div class="controls">
-								<input type="file" id="basicinput" placeholder="Type something here..." class="span8">
+								<input type="file" id="basicinput" class="span8">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<button type="submit" class="btn btn-primary">Upload Application</button>
 							</div>
 						</div>
 					</form>
