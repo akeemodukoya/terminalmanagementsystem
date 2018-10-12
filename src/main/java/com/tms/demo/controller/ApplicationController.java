@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.tms.demo.model.Application;
 import com.tms.demo.service.TmsService;
@@ -26,13 +27,13 @@ public class ApplicationController {
 		return "task";
 	}
 	
-	@RequestMapping("/application")
+	@RequestMapping(value="/application", method= RequestMethod.GET)
 	public String applicationForm(Model model) {
 		model.addAttribute("application", new Application(null, null, null));
 		return "application";
 	}
 	
-	@RequestMapping("/application")
+	@RequestMapping(value="/application", method= RequestMethod.POST)
 	public String applicationSubmit(@ModelAttribute Application application) {
 		return "result";
 	}

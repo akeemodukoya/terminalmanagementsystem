@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.tms.demo.model.Terminal;
 import com.tms.demo.service.TmsService;
 
 @Controller
@@ -21,10 +23,16 @@ public class TerminalController {
 		return "activity";
 	}
 	
-	@RequestMapping("/terminals/{id}")
+	@RequestMapping(value="/terminals/{id}", method = RequestMethod.GET)
 	public String terminal(Model model) {
 		model.addAttribute("terminal", tmsService.findByTerminalId());
 		return "";
+	}
+	
+	@RequestMapping(value="/terminal", method = RequestMethod.POST)
+	public String terminalForm(Model model) {
+		model.addAttribute("terminal", new Terminal(null));
+		return "terminal";
 	}
 	
 	@RequestMapping("/terminals/{id}")
