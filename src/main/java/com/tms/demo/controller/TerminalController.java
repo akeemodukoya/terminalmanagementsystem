@@ -38,7 +38,7 @@ public class TerminalController {
 	
 	@RequestMapping(value="/terminal", method = RequestMethod.POST)
 	public String terminalSubmit(@ModelAttribute Terminal terminal) {
-		return "result";
+		return "resultterminal";
 	}
 	
 	@RequestMapping("/terminals/{id}")
