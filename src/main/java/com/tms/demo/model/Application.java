@@ -18,7 +18,7 @@ public class Application {
 	private String version;
 	
 	@ManyToOne
-	private Application application;
+	private User user;
 	
 	public Application( String name, String file, String version) {
 		this.name = name;

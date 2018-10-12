@@ -3,6 +3,7 @@ package com.tms.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -29,10 +30,15 @@ public class TerminalController {
 		return "";
 	}
 	
-	@RequestMapping(value="/terminal", method = RequestMethod.POST)
+	@RequestMapping(value="/terminal", method = RequestMethod.GET)
 	public String terminalForm(Model model) {
 		model.addAttribute("terminal", new Terminal(null));
 		return "terminal";
+	}
+	
+	@RequestMapping(value="/terminal", method = RequestMethod.POST)
+	public String terminalSubmit(@ModelAttribute Terminal terminal) {
+		return "result";
 	}
 	
 	@RequestMapping("/terminals/{id}")
