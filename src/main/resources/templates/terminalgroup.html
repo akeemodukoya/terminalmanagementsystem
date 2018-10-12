@@ -1,0 +1,50 @@
+ <body>
+    <div class="" th:include="fragments/navSidebar" th:remove="tag"></div>
+    <div class="span9">
+    	<div class="content">
+    		<div class="module">
+    			<div class="module-head">
+					<h3>Terminal Group</h3>
+				</div>
+		    	<div class="module-body">
+		    		<form class="form-horizontal row-fluid" th:action="@{/terminalgroup}" th:object="${terminalgroup}" method="post">
+						<div class="control-group">
+							<label class="control-label" for="basicinput">Application</label>
+							<div class="controls">
+								<input type="text" id="basicinput" th:field="*{application_id}" placeholder="Type something here..." class="span8">
+								<span class="help-inline">Minimum 5 Characters</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label for="basicinput" class="control-label">Terminal</label>
+							<div class="controls">
+								<input type="text" id="basicinput" th:field="*{terminal_id}" placeholder="Version" class="span8">
+							</div>
+						</div>
+						<div class="control-group">
+							<label for="basicinput" class="control-label">Partition size</label>
+							<div class="controls">
+								<input type="number" id="basicinput" th:field="*{partition_size}" placeholder="Version" class="span8">
+							</div>
+						</div>
+						<div class="control-group">
+							<label for="basicinput" class="control-label"></label>
+							<div class="controls">
+								<input type="file" th:field="*{file}" id="basicinput" class="span8">
+							</div>
+						</div>
+						<div class="control-group">
+							<div class="controls">
+								<button type="submit" class="btn btn-primary">Upload Application</button>
+							</div>
+						</div>
+					</form>
+		    	</div>
+		    </div>
+    	</div>
+    </div>
+    
+	
+    <div th:include="fragments/footer" class="" th:remove="tag"></div>
+  
+</body>
