@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.tms.demo.model.Project;
 import com.tms.demo.service.TmsService;
 
 @Controller
@@ -20,6 +21,11 @@ public class ProjectController {
 	public String project(Model model) {
 		model.addAttribute("projects", tmsService.findAllProjects());
 		return "ui-typography";
+	}
+	@RequestMapping("/project")
+	public String projectForm(Model model) {
+		model.addAttribute("project", new Project(null));
+		return "project";
 	}
 	
 	@RequestMapping("/projects/{id}")
