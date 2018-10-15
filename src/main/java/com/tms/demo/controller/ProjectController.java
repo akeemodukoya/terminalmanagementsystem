@@ -3,6 +3,7 @@ package com.tms.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.tms.demo.model.Project;
@@ -26,6 +27,11 @@ public class ProjectController {
 	public String projectForm(Model model) {
 		model.addAttribute("project", new Project(null));
 		return "project";
+	}
+	
+	@RequestMapping("/project")
+	public String projectSubmit(@ModelAttribute Project project) {
+		return "projectadd";
 	}
 	
 	@RequestMapping("/projects/{id}")
