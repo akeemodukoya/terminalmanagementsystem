@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.tms.demo.model.Project;
 import com.tms.demo.service.TmsService;
@@ -23,13 +24,13 @@ public class ProjectController {
 		model.addAttribute("projects", tmsService.findAllProjects());
 		return "ui-typography";
 	}
-	@RequestMapping("/project")
+	@RequestMapping(value="/project", method = RequestMethod.GET)
 	public String projectForm(Model model) {
 		model.addAttribute("project", new Project(null));
 		return "project";
 	}
 	
-	@RequestMapping("/project")
+	@RequestMapping(value="/project", method= RequestMethod.POST)
 	public String projectSubmit(@ModelAttribute Project project) {
 		return "projectadd";
 	}
