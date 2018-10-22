@@ -31,9 +31,10 @@ public class TerminalGroupController {
 	public void delete() {
 		
 	}
-//	@RequestMapping("/terminalgroups/{id}")
-//	public String terminalgroup(Model model) {
-//		model.addAttribute("","");
-//		return "";
-//	}
+	
+	@RequestMapping("/terminalgroups/{id}")
+	public String terminalGroup(Model model) {
+		model.addAttribute("","");
+		return "";
+	}
 }
