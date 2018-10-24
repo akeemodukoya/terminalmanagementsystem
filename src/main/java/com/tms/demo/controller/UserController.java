@@ -19,7 +19,7 @@ public class UserController {
 	}
 	
 	@RequestMapping(value="/login", method = RequestMethod.GET)
-	public String loginForm() {
+	public String login() {
 		
 		return "login";
 	}
@@ -28,5 +28,11 @@ public class UserController {
 	public String loginSuccess() {
 		
 		return "index";
+	}
+	
+	@RequestMapping("/login-error")
+	public String loginError(Model model){
+		model.addAttribute("loginError", true);
+		return "login";
 	}
 }
