@@ -18,16 +18,10 @@ public class UserController {
 		
 	}
 	
-	@RequestMapping(value="/login", method = RequestMethod.GET)
+	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String login() {
 		
 		return "other-login";
-	}
-	
-	@RequestMapping(value="/login", method = RequestMethod.POST)
-	public String loginSuccess() {
-		
-		return "index";
 	}
 	
 	@RequestMapping("/login-error")

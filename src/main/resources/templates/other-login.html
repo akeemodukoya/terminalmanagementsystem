@@ -20,19 +20,20 @@
 			<!-- <div class="row"> -->
 				<h1 style="text-align: center;">TMS</h1>
 				<div class="module module-login">
-					<form class="form-vertical">
+					<p th:if="${loginError}" class="error">Wrong user or password</p>
+					<form th:action="@{/other-login.html}" class="form-vertical" method="POST">
 						<div class="module-head">
 							<h3>Sign In</h3>
 						</div>
 						<div class="module-body">
 							<div class="control-group">
 								<div class="controls row-fluid">
-									<input class="span12" type="text" id="inputEmail" placeholder="Username">
+									<input class="span12" type="text" id="email" name="email" placeholder="User email">
 								</div>
 							</div>
 							<div class="control-group">
 								<div class="controls row-fluid">
-									<input class="span12" type="password" id="inputPassword" placeholder="Password">
+									<input class="span12" type="password" id="password" name="password" placeholder="Password">
 								</div>
 							</div>
 						</div>
