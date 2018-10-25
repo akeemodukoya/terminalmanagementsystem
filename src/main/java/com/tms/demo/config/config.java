@@ -15,6 +15,7 @@ public class Config extends WebSecurityConfigurerAdapter{
 			.authorizeRequests()
 				.antMatchers("/css/**", "/index").permitAll()
 				.antMatchers("/bootstrap/**").permitAll()
+				.antMatchers("/images/**").permitAll()
 				.antMatchers("/scripts/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
