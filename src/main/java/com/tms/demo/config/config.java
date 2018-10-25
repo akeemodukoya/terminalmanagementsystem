@@ -13,6 +13,9 @@ public class Config extends WebSecurityConfigurerAdapter{
 	protected void configure(HttpSecurity http) throws Exception {
 		http
 			.authorizeRequests()
+				.antMatchers("/css/**", "/index").permitAll()
+				.antMatchers("/bootstrap/**").permitAll()
+				.antMatchers("/scripts/**").permitAll()
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()
