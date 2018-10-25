@@ -1,8 +1,10 @@
 package com.tms.demo.config;
 
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 @EnableWebSecurity
-public class config extends WebSecurityConfigurerAdapter{
+public class Config extends WebSecurityConfigurerAdapter{
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -12,6 +14,9 @@ public class config extends WebSecurityConfigurerAdapter{
 				.and()
 			.formLogin()
 				.loginPage("/login")
+				.permitAll()
+				.and()
+			.logout()
 				.permitAll();
 	}
 }
