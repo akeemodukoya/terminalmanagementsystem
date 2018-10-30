@@ -12,7 +12,7 @@ public class UserController {
 	
 	@RequestMapping("/users")
 	public String user(Model model) {
-		model.addAttribute("","");
+		model.addAttribute("user","User");
 		return "table";
 	}
 	
