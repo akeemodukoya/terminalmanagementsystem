@@ -39,11 +39,7 @@ public class TmsServiceImpl implements TmsService{
 		this.userRepository = userRepository;
 	}
 
-	@Transactional(readOnly = true)
-	public User findByEmail(String email){
-		User user = TmsService.findByEmail(email);
-		return user;
-	}
+	
 	@Override
 	public List<Application> findAllApplications() {
 		// TODO Auto-generated method stub
