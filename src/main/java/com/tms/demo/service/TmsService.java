@@ -49,6 +49,11 @@ public interface TmsService {
 	
 	public User findById(int id) throws DataAccessException;
 	
+	public static User findByEmail(String email) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
 	public void SaveUser(User user) throws DataAccessException;
 	
 	public long count(User user) throws DataAccessException;

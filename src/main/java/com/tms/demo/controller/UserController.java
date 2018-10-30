@@ -16,12 +16,12 @@ public class UserController {
 		return "table";
 	}
 	
-	@RequestMapping("/users/{id}")
+	@RequestMapping(value="/user/{id}", method= RequestMethod.DELETE)
 	public void delete() {
 		
 	}
 	
-	@RequestMapping(value="/login", method = RequestMethod.POST)
+	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login() {
 		return "other-login";
 	}
