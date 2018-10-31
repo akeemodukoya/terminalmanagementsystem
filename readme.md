@@ -9,4 +9,4 @@ The above application allows a user to upload a bin file that will be deployed w
 * Java Springboot
 * Jquery - Datatables
 * TCP socket connection
-* PostgreSQL
+* Database - MySQL
