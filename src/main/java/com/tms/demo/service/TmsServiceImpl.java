@@ -157,7 +157,12 @@ public class TmsServiceImpl implements TmsService{
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
+	@Override
+	public User findByEmail(String email) throws DataAccessException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }

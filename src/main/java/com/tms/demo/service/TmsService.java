@@ -52,4 +52,6 @@ public interface TmsService {
 	public void SaveUser(User user) throws DataAccessException;
 	
 	public long count(User user) throws DataAccessException;
+	
+	public User findByEmail(String email) throws DataAccessException;
 }
