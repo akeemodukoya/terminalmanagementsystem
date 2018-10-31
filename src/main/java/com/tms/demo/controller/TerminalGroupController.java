@@ -35,6 +35,6 @@ public class TerminalGroupController {
 	@RequestMapping("/terminalgroups/{id}")
 	public String terminalGroup(Model model) {
 		model.addAttribute("","");
-		return "";
+		return "terminalgroup";
 	}
 }

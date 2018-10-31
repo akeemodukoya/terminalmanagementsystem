@@ -27,7 +27,7 @@ public class TerminalController {
 	@RequestMapping(value="/terminals/{id}", method = RequestMethod.GET)
 	public String terminal(Model model) {
 		model.addAttribute("terminal", tmsService.findByTerminalId());
-		return "";
+		return "terminal";
 	}
 	
 	@RequestMapping(value="/terminal", method = RequestMethod.GET)
