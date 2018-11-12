@@ -40,127 +40,106 @@ public class TmsServiceImpl implements TmsService{
 
 	@Override
 	public List<Application> findAllApplications() {
-		// TODO Auto-generated method stub
 		return (List<Application>) applicationRepository.findAll();
 	}
 
 	@Override
 	public List<Project> findAllProjects() {
-		// TODO Auto-generated method stub
 		return (List<Project>) projectRepository.findAll();
 	}
 
 	@Override
 	public List<Terminal> findAllTerminals() {
-		// TODO Auto-generated method stub
 		return (List<Terminal>) terminalRepository.findAll();
 	}
 
 	@Override
 	public List<TerminalGroup> findAllTerminalGroups() {
-		// TODO Auto-generated method stub
 		return (List<TerminalGroup>) terminalGroupRepository.findAll();
 	}
 
 	@Override
 	public List<User> findAllUsers() {
-		// TODO Auto-generated method stub
 		return (List<User>) userRepository.findAll();
 	}
 
 	@Override
 	public Application findApplicationById(int id) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public Project findProjectById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return ((TmsService) projectRepository).findProjectById(id);
 	}
 
 	@Override
 	public Terminal findByTerminalId() {
-		// TODO Auto-generated method stub
 		return ((TmsService) terminalRepository).findByTerminalId();
 	}
 
 	@Override
 	public TerminalGroup findByTerminalGroupId(int id) {
-		// TODO Auto-generated method stub
 		return ((TmsService) terminalGroupRepository).findByTerminalGroupId(id);
 	}
 
 	@Override
 	public User findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return ((TmsService) userRepository).findById(id);
 	}
 
 	@Override
 	public void SaveApplication(Application application) {
-		// TODO Auto-generated method stub
 		applicationRepository.save(application);
 	}
 
 	@Override
 	public void SaveProject(Project project) {
-		// TODO Auto-generated method stub
 		projectRepository.save(project);
 	}
 
 	@Override
 	public void SaveTerminal(Terminal terminal) {
-		// TODO Auto-generated method stub
 		terminalRepository.save(terminal);
 	}
 
 	@Override
 	public void SaveTerminalGroup(TerminalGroup terminalGroup) {
-		// TODO Auto-generated method stub
 		terminalGroupRepository.save(terminalGroup);
 	}
 
 	@Override
 	public void SaveUser(User user) {
-		// TODO Auto-generated method stub
 		userRepository.save(user);
 	}
 
 	@Override
 	public long count(Application application) throws DataAccessException {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public long count(Project project) throws DataAccessException {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public long count(Terminal terminal) throws DataAccessException {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public long count(TerminalGroup terminalGroup) throws DataAccessException {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public long count(User user) throws DataAccessException {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
 	public User findByEmail(String email) throws DataAccessException {
-		// TODO Auto-generated method stub
 		return userRepository.findByEmail(email);
 	}
 	
