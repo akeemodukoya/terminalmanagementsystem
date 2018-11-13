@@ -21,7 +21,7 @@
 				<h1 style="text-align: center;">TMS</h1>
 				<div class="module module-login">
 					<p th:if="${loginError}" class="error">Wrong user or password</p>
-					<form th:action="@{/other-login.html}" class="form-vertical" method="POST">
+					<form th:action="@{/other-login.html}" th:object="${user}" class="form-vertical" method="POST">
 						<div class="module-head">
 							<h3>Sign In</h3>
 						</div>
