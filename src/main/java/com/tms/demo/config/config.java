@@ -42,8 +42,8 @@ public class Config extends WebSecurityConfigurerAdapter{
 	}
 	
 	@Autowired
-	public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
-		auth.TmsService(tmsService).passwordEncoder(bCryptPasswordEncoder());
+	public void configureGlobal(AuthenticationManagerBuilder tms) throws Exception{
+		tms.tmsService(tmsService).passwordEncoder(bCryptPasswordEncoder());
 	}
 	
 }

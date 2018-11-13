@@ -26,9 +26,9 @@ public class UserController {
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login(Model model, String error, String logout) {
 		if (error != null)
-			model.addAttribute("error", "Email and Password do not match!")
+			model.addAttribute("error", "Email and Password do not match!");
 		if (logout != null)
-			model.addAttribute("logout", "User successfully logged out.")
+			model.addAttribute("logout", "User successfully logged out.");
 		return "other-login";
 	}
 	
