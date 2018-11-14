@@ -11,11 +11,13 @@ import com.tms.demo.model.Project;
 import com.tms.demo.model.Terminal;
 import com.tms.demo.model.TerminalGroup;
 import com.tms.demo.model.User;
+import com.tms.demo.model.UserType;
 import com.tms.demo.repository.ApplicationRepository;
 import com.tms.demo.repository.ProjectRepository;
 import com.tms.demo.repository.TerminalGroupRepository;
 import com.tms.demo.repository.TerminalRepository;
 import com.tms.demo.repository.UserRepository;
+import com.tms.demo.repository.UserTypeRepository;
 import com.tms.demo.service.TmsService;
 
 @Service
@@ -26,16 +28,18 @@ public class TmsServiceImpl implements TmsService{
 	private TerminalGroupRepository terminalGroupRepository;
 	private TerminalRepository terminalRepository;
 	private UserRepository userRepository;
+	private UserTypeRepository userTypeRepository;
 	
 	@Autowired
 	public TmsServiceImpl(ApplicationRepository applicationRepository, ProjectRepository projectRepository,
 			TerminalGroupRepository terminalGroupRepository, TerminalRepository terminalRepository,
-			UserRepository userRepository) {
+			UserRepository userRepository, UserTypeRepository userTypeRepository) {
 		this.applicationRepository = applicationRepository;
 		this.projectRepository = projectRepository;
 		this.terminalGroupRepository = terminalGroupRepository;
 		this.terminalRepository = terminalRepository;
 		this.userRepository = userRepository;
+		this.userTypeRepository = userTypeRepository;
 	}
 
 	@Override
@@ -141,6 +145,12 @@ public class TmsServiceImpl implements TmsService{
 	@Override
 	public User findByEmail(String email) throws DataAccessException {
 		return userRepository.findByEmail(email);
+	}
+
+	@Override
+	public void SaveUserType(UserType userType) throws DataAccessException {
+		// TODO Auto-generated method stub
+		userTypeRepository.save(userType);
 	}
 	
 }

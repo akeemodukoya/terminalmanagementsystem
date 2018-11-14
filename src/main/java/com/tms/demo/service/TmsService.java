@@ -9,6 +9,7 @@ import com.tms.demo.model.Project;
 import com.tms.demo.model.Terminal;
 import com.tms.demo.model.TerminalGroup;
 import com.tms.demo.model.User;
+import com.tms.demo.model.UserType;
 
 //@Component
 public interface TmsService {
@@ -54,4 +55,6 @@ public interface TmsService {
 	public long count(User user) throws DataAccessException;
 	
 	public User findByEmail(String email) throws DataAccessException;
+	
+	public void SaveUserType(UserType userType) throws DataAccessException;
 }
