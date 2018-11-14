@@ -1,9 +1,9 @@
 package com.tms.demo.model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.Table;
 
@@ -14,9 +14,8 @@ public class UserType {
 	@GeneratedValue
 	private Integer id;
 	private String name;
+	private Integer user_id;
 	
-	@ManyToOne
-	private User user;
 	
 	public UserType(String name) {
 		this.name = name;
@@ -37,5 +36,14 @@ public class UserType {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public Integer getUser_id() {
+		return user_id;
+	}
+
+	public void setUser_id(Integer user_id) {
+		this.user_id = user_id;
+	}
+
 	
 }

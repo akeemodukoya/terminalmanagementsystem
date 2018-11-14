@@ -29,6 +29,9 @@ public class User {
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 //	@JoinColumn(name = "project_id")
 	private Set<Project> project = new HashSet<>();
+	
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	private UserType userType;
 
 	public User(String email, String first_name, String last_name) {
 		this.email = email;
