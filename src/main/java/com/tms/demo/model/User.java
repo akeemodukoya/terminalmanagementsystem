@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
@@ -23,6 +24,7 @@ public class User {
 	private String first_name;
 	private String last_name;
 	private String password;
+	private Set<UserType> userTypes;
 	
 	@ManyToOne
 	private Application applications;
@@ -31,9 +33,10 @@ public class User {
 //	@JoinColumn(name = "project_id")
 	private Set<Project> project = new HashSet<>();
 	
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne
+	@JoinColumn(name= "user_id")
 	private UserType userType;
-
+	
 	public User(String email, String first_name, String last_name) {
 		this.email = email;
 		this.first_name = first_name;
@@ -78,6 +81,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public Set<UserType> getUserTypes() {
+		return userTypes;
+	}
+
+	public void setUserTypes(Set<UserType> userTypes) {
+		this.userTypes = userTypes;
 	}
 	
 }
