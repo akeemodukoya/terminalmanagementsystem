@@ -57,4 +57,6 @@ public interface TmsService {
 	public User findByEmail(String email) throws DataAccessException;
 	
 	public void SaveUserType(UserType userType) throws DataAccessException;
+
+	void save(User user);
 }

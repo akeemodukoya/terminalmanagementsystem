@@ -8,7 +8,6 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
@@ -33,9 +32,9 @@ public class User {
 //	@JoinColumn(name = "project_id")
 	private Set<Project> project = new HashSet<>();
 	
-	@ManyToOne
-	@JoinColumn(name= "user_id")
-	private UserType userType;
+//	@ManyToOne
+//	@JoinColumn(name= "user_id")
+//	private Set<UserType> userTypes;
 	
 	public User(String email, String first_name, String last_name) {
 		this.email = email;
@@ -82,7 +81,7 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public Set<UserType> getUserTypes() {
 		return userTypes;
 	}

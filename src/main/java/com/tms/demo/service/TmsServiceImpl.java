@@ -1,10 +1,17 @@
 package com.tms.demo.service;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.tms.demo.model.Application;
 import com.tms.demo.model.Project;
@@ -41,7 +48,11 @@ public class TmsServiceImpl implements TmsService{
 		this.userRepository = userRepository;
 		this.userTypeRepository = userTypeRepository;
 	}
-
+	
+	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
 	@Override
 	public List<Application> findAllApplications() {
 		return (List<Application>) applicationRepository.findAll();
@@ -143,14 +154,28 @@ public class TmsServiceImpl implements TmsService{
 	}
 
 	@Override
-	public User findByEmail(String email) throws DataAccessException {
-		return userRepository.findByEmail(email);
-	}
-
-	@Override
 	public void SaveUserType(UserType userType) throws DataAccessException {
 		// TODO Auto-generated method stub
 		userTypeRepository.save(userType);
+	}
+	
+	@Override
+	@Transactional
+	public User findByEmail(String Email) throws DataAccessException {
+		User user = userRepository.findByEmail(email);
+		
+		Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
+		for (UserType userType : user.getUserTypes()) {
+			grantedAuthorities.add(new SimpleGrantedAuthority(userType.getName()));
+		}
+		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), grantedAuthorities);
+	}
+	
+	@Override
+	public void save(User user) {
+		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		user.setUserTypes(new HashSet<>(userTypeRepository.findAll()));
+		userRepository.save(user);
 	}
 	
 }

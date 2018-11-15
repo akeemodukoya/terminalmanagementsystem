@@ -1,9 +1,12 @@
 package com.tms.demo.model;
 
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Table;
 
@@ -15,6 +18,9 @@ public class UserType {
 	private Integer id;
 	private String name;
 	private Integer user_id;
+	
+	@OneToMany
+	private Set<User> user;
 	
 	
 	public UserType(String name) {
