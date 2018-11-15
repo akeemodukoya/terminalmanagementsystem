@@ -21,7 +21,7 @@ public class UserValidator implements Validator{
 	
 	@Override
 	public void validate(Object o, Errors errors) {
-		User user = (User) 0;
+		User user = (User) o;
 		
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty");
 		if (user.getEmail().length() < 6 || user.getEmail().length() > 32) {
@@ -34,6 +34,9 @@ public class UserValidator implements Validator{
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "password", "NotEmpty");
 		if (user.getPassword().length() < 8 || user.getPassword().length() > 32) {
 			errors.rejectValue("password", "Size.userFrom.password");
+		}
+		if (user.getPassword_confirm().length() < 8 || user.getPassword_confirm().length() > 32) {
+			errors.rejectValue("password_confirm", "Size.userForm.password_confirm");
 		}
 	}
 }

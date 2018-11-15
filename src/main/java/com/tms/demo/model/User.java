@@ -23,6 +23,7 @@ public class User {
 	private String first_name;
 	private String last_name;
 	private String password;
+	private String password_confirm;
 	private Set<UserType> userTypes;
 	
 	@ManyToOne
@@ -40,6 +41,10 @@ public class User {
 		this.email = email;
 		this.first_name = first_name;
 		this.last_name = last_name;
+	}
+
+	public User() {
+		// TODO Auto-generated constructor stub
 	}
 
 	public Integer getId() {
@@ -88,6 +93,14 @@ public class User {
 
 	public void setUserTypes(Set<UserType> userTypes) {
 		this.userTypes = userTypes;
+	}
+
+	public String getPassword_confirm() {
+		return password_confirm;
+	}
+
+	public void setPassword_confirm(String password_confirm) {
+		this.password_confirm = password_confirm;
 	}
 	
 }

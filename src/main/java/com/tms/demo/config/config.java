@@ -43,7 +43,7 @@ public class Config extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder tms) throws Exception{
-//		tms.tmsService(tmsService).passwordEncoder(bCryptPasswordEncoder());
+		tms.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}
 	
 }
