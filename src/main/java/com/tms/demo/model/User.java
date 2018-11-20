@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.Table;
 
@@ -24,6 +25,8 @@ public class User {
 	private String last_name;
 	private String password;
 	private String password_confirm;
+	
+	@Transient
 	private Set<UserType> userTypes;
 	
 	@ManyToOne
@@ -86,7 +89,8 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
+//	@ManyToOne
 	public Set<UserType> getUserTypes() {
 		return userTypes;
 	}

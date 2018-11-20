@@ -124,11 +124,6 @@ public class TmsServiceImpl implements TmsService{
 	}
 
 	@Override
-	public void SaveUser(User user) {
-		userRepository.save(user);
-	}
-
-	@Override
 	public long count(Application application) throws DataAccessException {
 		return 0;
 	}
@@ -161,13 +156,14 @@ public class TmsServiceImpl implements TmsService{
 	
 	@Override
 	@Transactional
-	public User findByEmail(String Email) throws DataAccessException {
-		User user = userRepository.findByEmail(email);
+	public UserDetails findByEmail(String Email) throws DataAccessException {
+		User user = userRepository.findByEmail(Email);
 		
 		Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
 		for (UserType userType : user.getUserTypes()) {
 			grantedAuthorities.add(new SimpleGrantedAuthority(userType.getName()));
 		}
+		
 		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), grantedAuthorities);
 	}
 	

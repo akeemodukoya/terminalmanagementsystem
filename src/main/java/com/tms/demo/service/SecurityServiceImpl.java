@@ -4,6 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
@@ -14,8 +17,15 @@ import com.tms.demo.service.TmsService;
 @Service
 public class SecurityServiceImpl implements SecurityService{
 
-	@Autowired
-	private AuthenticationManager authenticationManager;
+	
+	private AuthenticationManager authenticationManager=new AuthenticationManager() {
+		
+		@Override
+		public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+			// TODO Auto-generated method stub
+			return null;
+		}
+	};
 	
 	@Autowired
 	private TmsService tmsService;
@@ -24,16 +34,18 @@ public class SecurityServiceImpl implements SecurityService{
 	
 	@Override
 	public String findLoggedInEmail() {
-		Object userDetails instanceof UserDetails) {
-			return ((UserDetails)userDetails).getEmail();
+		Object userDetails = SecurityContextHolder.getContext().getAuthentication().getDetails();
+		if (userDetails instanceof UserDetails) {
+			return ((UserDetails)userDetails).getUsername();
 		}
 		return null;
 	}
 	
 	@Override
-	public void autologin(String email, String password) {
+	public  void autologin(String email, String password) {
 		UserDetails userDetails = tmsService.findByEmail(email);
-		EmailPasswordAuthenticationToken emailPasswordAuthenticationToken = new EmailPasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
+		
+		UsernamePasswordAuthenticationToken emailPasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
 		
 		authenticationManager.authenticate(emailPasswordAuthenticationToken);
 		
@@ -41,5 +53,11 @@ public class SecurityServiceImpl implements SecurityService{
 			SecurityContextHolder.getContext().setAuthentication(emailPasswordAuthenticationToken);
 			logger.debug(String.format("Autologin %s successfully!", email));
 		}
+	}
+
+	@Override
+	public void autologin(String email, String password, String password_confirm) {
+		// TODO Auto-generated method stub
+		
 	}
 }

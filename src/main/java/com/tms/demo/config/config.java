@@ -7,16 +7,16 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.tms.demo.service.TmsService;
 
 @Configuration
 @EnableWebSecurity
 public class Config extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
-	TmsService tmsService;
+	UserDetailsService userDetailsService;
 	
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
@@ -43,6 +43,7 @@ public class Config extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	public void configureGlobal(AuthenticationManagerBuilder tms) throws Exception{
+		//tms.TmsService(tmsService).passwordEncoder(bCryptPasswordEncoder());
 		tms.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
 	}
 	

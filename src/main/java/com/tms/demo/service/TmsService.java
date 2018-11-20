@@ -3,6 +3,7 @@ package com.tms.demo.service;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import com.tms.demo.model.Application;
 import com.tms.demo.model.Project;
@@ -54,7 +55,7 @@ public interface TmsService {
 	
 	public long count(User user) throws DataAccessException;
 	
-	public User findByEmail(String email) throws DataAccessException;
+	public UserDetails findByEmail(String email) throws DataAccessException;
 	
 	public void SaveUserType(UserType userType) throws DataAccessException;
 
