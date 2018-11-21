@@ -17,8 +17,12 @@ import com.tms.demo.validator.UserValidator;
 @Controller
 public class UserController {
 	
+	private final TmsService tmsService;
+	
 	@Autowired
-	private TmsService tmsService;
+	private UserController (TmsService tmsService) {
+		this.tmsService = tmsService;
+	}
 	
 	@Autowired
 	private SecurityService securityService;
@@ -64,10 +68,10 @@ public class UserController {
 //	login method for a user
 	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login(Model model, String error, String logout) {
-		if (error != null)
-			model.addAttribute("error", "Email and Password do not match!");
-		if (logout != null)
-			model.addAttribute("logout", "User successfully logged out.");
+//		if (error != null)
+//			model.addAttribute("error", "Email and Password do not match!");
+//		if (logout != null)
+//			model.addAttribute("logout", "User successfully logged out.");
 		return "other-login";
 	}
 	
