@@ -12,12 +12,10 @@ import com.tms.demo.service.TmsService;
 
 @Controller
 public class TerminalController {
-	private final TmsService tmsService;
 	
 	@Autowired
-	private TerminalController(TmsService tmsService) {
-		this.tmsService = tmsService;
-	}
+	public TmsService tmsService;
+	
 	@RequestMapping("/terminals")
 	public String terminals(Model model) {
 		model.addAttribute("terminals", tmsService.findAllTerminals());

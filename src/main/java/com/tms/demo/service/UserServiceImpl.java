@@ -1,6 +1,7 @@
 package com.tms.demo.service;
 
 import java.util.HashSet;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -35,6 +36,12 @@ public class UserServiceImpl implements UserService{
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		UserType userType = userTypeRepository.findByName("Admin");
 //		user.SetUserType(new HashSet<userTypes>(Arrays.asList(userType)));
+	}
+
+	@Override
+	public List<User> findAll() {
+		// TODO Auto-generated method stub
+		return userRepository.findAll();
 	}
 	
 

@@ -39,16 +39,16 @@ public class UserController {
 	}
 	
 //	login error page
-	@RequestMapping("/error")
-	public String loginError(Model model){
-		model.addAttribute("loginError", true);
-		return "login-error";
-	}
+//	@RequestMapping("/error")
+//	public String loginError(Model model){
+//		model.addAttribute("loginError", true);
+//		return "login-error";
+//	}
 	
 //	logout page
-	@RequestMapping(value="/logout")
+	@RequestMapping(value="/logout", method = RequestMethod.DELETE)
 	public String logout(Model model) {
-		model.addAttribute("title", "Logout");
+		model.addAttribute("title", true);
 		return "logout";
 	}
 }

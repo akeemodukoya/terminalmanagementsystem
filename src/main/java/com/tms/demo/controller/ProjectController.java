@@ -12,12 +12,9 @@ import com.tms.demo.service.TmsService;
 
 @Controller
 public class ProjectController {
-	private final TmsService tmsService;
 	
 	@Autowired
-	private ProjectController(TmsService tmsService) {
-		this.tmsService = tmsService;
-	}
+	public TmsService tmsService;
 	
 	@RequestMapping("/projects")
 	public String project(Model model) {
