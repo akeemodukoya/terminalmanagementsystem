@@ -32,23 +32,23 @@ public class UserController {
 		
 	}
 	
-	@RequestMapping(value="/login", method = RequestMethod.POST)
+	@RequestMapping(value="/login.html", method = RequestMethod.POST)
 	public String login(Model model) {
 		model.addAttribute("user", userService.findUserByEmail(null));
-		return "other-login";
+		return "login";
 	}
 	
 //	login error page
-	@RequestMapping("/error")
+	@RequestMapping("/error.html")
 	public String loginError(Model model){
 		model.addAttribute("loginError", true);
-		return "error";
+		return "error.html";
 	}
 	
 //	logout page
 	@RequestMapping(value="/logout", method = RequestMethod.DELETE)
 	public String logout(Model model) {
 		model.addAttribute("title", true);
-		return "logout";
+		return "logout.html";
 	}
 }

@@ -30,14 +30,16 @@ public class Config extends WebSecurityConfigurerAdapter{
 				.antMatchers("/images/**").permitAll()
 				.antMatchers("/scripts/**").permitAll()
 				.anyRequest().authenticated()
-				.and().exceptionHandling().accessDeniedPage("/error")
 				.and()
 			.formLogin()
 				.loginPage("/login")
 				.permitAll()
+				.failureUrl("/error.html")
 				.and()
 			.logout()
-				.permitAll();
+			.permitAll()
+			.logoutSuccessUrl("/index.html");
+				
 	}
 	
 }

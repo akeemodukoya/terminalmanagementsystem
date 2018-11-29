@@ -1,6 +1,6 @@
  <body>
-<!--     <div class="" th:include="fragments/navSidebar" th:remove="tag"></div> -->
-    <div class="span9">
+    <div class="" th:include="fragments/defaults" th:remove="tag"></div>
+    <div class="span8 offset2">
     	<div class="content">
     		<div class="module">
     			<div class="module-head">
@@ -8,7 +8,7 @@
 				</div>
 		    	<div class="module-body">
 		    		<p th:if="${loginError}" class="error">Wrong user or password</p>
-				    <form th:action="@{/login}" th:object="@{user}" method="post">
+				    <form th:action="@{/login.html}" th:object="@{user}" method="post">
 				      <label for="email">Email</label>:
 				      <input type="email" id="email" name="email" autofocus="autofocus" th:field="*{email}"/> <br />
 				      <label for="password">Password</label>:
