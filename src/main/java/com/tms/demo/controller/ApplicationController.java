@@ -13,12 +13,9 @@ import com.tms.demo.service.TmsService;
 @Controller
 @RequestMapping("/")
 public class ApplicationController {
-	private final TmsService tmsService;
 	
 	@Autowired
-	private ApplicationController(TmsService tmsService) {
-		this.tmsService = tmsService;
-	}
+	public TmsService  tmsService;
 	
 	
 	@RequestMapping("/applications")
