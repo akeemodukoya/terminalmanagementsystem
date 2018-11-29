@@ -6,23 +6,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.tms.demo.service.TmsService;
+import com.tms.demo.repository.UserRepository;
+import com.tms.demo.service.UserService;
 
 
 @Controller
 public class UserController {
 	
-	private final TmsService tmsService;
+	@Autowired
+	private UserService userService;
 	
 	@Autowired
-	private UserController (TmsService tmsService) {
-		this.tmsService = tmsService;
-	}
+	private UserRepository userRepository;
 	
 //	listing all users that are present in the system
 	@RequestMapping("/users")
 	public String user(Model model) {
-		model.addAttribute("user", tmsService.findAllUsers());
+		model.addAttribute("user", userRepository.findAll());
 		return "table";
 	}
 	
@@ -34,7 +34,7 @@ public class UserController {
 	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public String login(Model model) {
-		model.addAttribute("user", tmsService.findByEmail(null));
+		model.addAttribute("user", userService.findUserByEmail(null));
 		return "other-login";
 	}
 	

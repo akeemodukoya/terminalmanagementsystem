@@ -1,10 +1,13 @@
 package com.tms.demo.service;
 
+import java.util.HashSet;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.tms.demo.model.User;
+import com.tms.demo.model.UserType;
 import com.tms.demo.repository.UserRepository;
 import com.tms.demo.repository.UserTypeRepository;
 
@@ -30,6 +33,9 @@ public class UserServiceImpl implements UserService{
 	public void saveUser(User user) {
 		// TODO Auto-generated method stub
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		UserType userType = userTypeRepository.findByName("Admin");
+//		user.SetUserType(new HashSet<userTypes>(Arrays.asList(userType)));
 	}
+	
 
 }
