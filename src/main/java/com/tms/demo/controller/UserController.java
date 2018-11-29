@@ -39,11 +39,11 @@ public class UserController {
 	}
 	
 //	login error page
-//	@RequestMapping("/error")
-//	public String loginError(Model model){
-//		model.addAttribute("loginError", true);
-//		return "login-error";
-//	}
+	@RequestMapping("/error")
+	public String loginError(Model model){
+		model.addAttribute("loginError", true);
+		return "error";
+	}
 	
 //	logout page
 	@RequestMapping(value="/logout", method = RequestMethod.DELETE)

@@ -53,7 +53,7 @@ public class TmsServiceImpl implements TmsService{
 
 	@Override
 	public Application findApplicationById(int id) {
-		return null;
+		return applicationRepository.findApplicationById(null);
 	}
 
 	@Override

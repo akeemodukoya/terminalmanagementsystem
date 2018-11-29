@@ -18,8 +18,8 @@ public class UserServiceImpl implements UserService{
 	@Autowired
 	private UserRepository userRepository;
 	
-	@Autowired
-	private UserTypeRepository userTypeRepository;
+//	@Autowired
+//	private UserTypeRepository userTypeRepository;
 	
 	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
@@ -34,7 +34,7 @@ public class UserServiceImpl implements UserService{
 	public void saveUser(User user) {
 		// TODO Auto-generated method stub
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-		UserType userType = userTypeRepository.findByName("Admin");
+//		UserType userType = userTypeRepository.findByName("Admin");
 //		user.SetUserType(new HashSet<userTypes>(Arrays.asList(userType)));
 	}
 
