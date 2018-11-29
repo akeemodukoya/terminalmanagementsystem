@@ -3,14 +3,11 @@ package com.tms.demo.service;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import com.tms.demo.model.Application;
 import com.tms.demo.model.Project;
 import com.tms.demo.model.Terminal;
 import com.tms.demo.model.TerminalGroup;
-import com.tms.demo.model.User;
-import com.tms.demo.model.UserType;
 
 //@Component
 public interface TmsService {
@@ -46,16 +43,4 @@ public interface TmsService {
 	public void SaveTerminalGroup(TerminalGroup terminalGroup) throws DataAccessException;
 	
 	public long count(TerminalGroup terminalGroup) throws DataAccessException;
-	
-	public List<User> findAllUsers()throws DataAccessException;
-	
-	public User findById(int id) throws DataAccessException;
-	
-	public long count(User user) throws DataAccessException;
-	
-	public UserDetails findByEmail(String email) throws DataAccessException;
-	
-	public void SaveUserType(UserType userType) throws DataAccessException;
-
-	void save(User user);
 }

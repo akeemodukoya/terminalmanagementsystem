@@ -38,33 +38,9 @@ public class ApplicationController {
 		return "result";
 	}
 	
-//	public List<Application> retrieveAllApplications(@PathVariable int id) {
-// 
-//		return applicationRepository.findAll();
-//	}
-	
-//	@RequestMapping("/applications/{id}")
-//	public Application retrieveApplication(@PathVariable long id) {
-//		Optional <Application> application = applicationRepository.findById(id);
-//		
-//		if (!application.isPresent())
-//			throw new ApplicationContextException("id-" + id);
-//		
-//		return application.get();
-//	}
-//	
 	@RequestMapping("/application/{id}")
 	public void delete() {
 	
 	}
 	
-//	
-//	@RequestMapping("/application")
-//	public ResponseEntity<Object> createApplication(@RequestBody Application application) {
-//		Application savedApplication = applicationRepository.save(application);
-//		
-//		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}")
-//				.buildAndExpand(savedApplication.getId()).toUri();
-//		return ResponseEntity.created(location).build();
-//	}
 }

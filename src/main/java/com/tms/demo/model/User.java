@@ -33,12 +33,8 @@ public class User {
 	private Application applications;
 	
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//	@JoinColumn(name = "project_id")
 	private Set<Project> project = new HashSet<>();
 	
-//	@ManyToOne
-//	@JoinColumn(name= "user_id")
-//	private Set<UserType> userTypes;
 	
 	public User(String email, String first_name, String last_name) {
 		this.email = email;
