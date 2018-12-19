@@ -1,5 +1,7 @@
 package com.tms.demo.controller;
 
+import com.tms.demo.service.TmsService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,9 +12,13 @@ import com.tms.demo.model.TerminalGroup;
 
 @Controller
 public class TerminalGroupController {
+
+	@Autowired
+	private TmsService tmsService;
+
 	@RequestMapping("/terminalgroups")
 	public String terminalgroup(Model model) {
-		model.addAttribute("","");
+		model.addAttribute("terminalGroups", tmsService.findAllTerminalGroups());
 		return "other-user-listing";
 	}
 	

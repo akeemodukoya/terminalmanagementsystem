@@ -53,7 +53,7 @@ public class TmsServiceImpl implements TmsService{
 
 	@Override
 	public Application findApplicationById(int id) {
-		return applicationRepository.findApplicationById(null);
+		return applicationRepository.findApplicationById(id);
 	}
 
 	@Override
@@ -62,13 +62,13 @@ public class TmsServiceImpl implements TmsService{
 	}
 
 	@Override
-	public Terminal findByTerminalId() {
-		return ((TmsService) terminalRepository).findByTerminalId();
+	public Terminal findTerminalById(int id) {
+		return terminalRepository.findTerminalById(id);
 	}
 
 	@Override
-	public TerminalGroup findByTerminalGroupId(int id) {
-		return ((TmsService) terminalGroupRepository).findByTerminalGroupId(id);
+	public TerminalGroup findTerminalGroupById(int id) {
+		return terminalGroupRepository.findTerminalGroupById(id);
 	}
 
 

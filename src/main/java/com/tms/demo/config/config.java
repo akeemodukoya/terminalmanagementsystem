@@ -15,12 +15,12 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 @EnableWebSecurity
 public class Config extends WebSecurityConfigurerAdapter{
-	
+
 	@Bean
 	public BCryptPasswordEncoder bCryptPasswordEncoder() {
 		return new BCryptPasswordEncoder();
 	}
-	
+
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http
@@ -32,14 +32,14 @@ public class Config extends WebSecurityConfigurerAdapter{
 				.anyRequest().authenticated()
 				.and()
 			.formLogin()
-				.loginPage("/login")
+				.loginPage("/login.html")
 				.permitAll()
 				.failureUrl("/error.html")
 				.and()
 			.logout()
 			.permitAll()
 			.logoutSuccessUrl("/index.html");
-				
+
 	}
-	
+
 }

@@ -30,7 +30,7 @@ public interface TmsService {
 	
 	public List<Terminal> findAllTerminals() throws DataAccessException;
 	
-	public Terminal findByTerminalId() throws DataAccessException;
+	public Terminal findTerminalById(int id) throws DataAccessException;
 	
 	public void SaveTerminal(Terminal terminal) throws DataAccessException;
 	
@@ -38,7 +38,7 @@ public interface TmsService {
 	
 	public List<TerminalGroup> findAllTerminalGroups() throws DataAccessException;
 	
-	public TerminalGroup findByTerminalGroupId(int id) throws DataAccessException;
+	public TerminalGroup findTerminalGroupById(int id) throws DataAccessException;
 	
 	public void SaveTerminalGroup(TerminalGroup terminalGroup) throws DataAccessException;
 	

@@ -7,5 +7,5 @@ import com.tms.demo.model.Terminal;
 
 @Repository
 public interface TerminalRepository extends JpaRepository<Terminal, Long>{
-
+    Terminal findTerminalById(int id);
 }

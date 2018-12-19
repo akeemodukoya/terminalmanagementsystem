@@ -7,5 +7,5 @@ import com.tms.demo.model.TerminalGroup;
 
 @Repository
 public interface TerminalGroupRepository extends JpaRepository<TerminalGroup, Long>{
-
+    TerminalGroup findTerminalGroupById(int id);
 }

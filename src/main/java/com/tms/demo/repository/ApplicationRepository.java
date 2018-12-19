@@ -6,5 +6,5 @@ import com.tms.demo.model.Application;
 
 @Repository
 public interface ApplicationRepository extends JpaRepository<Application, Long>{
-	Application findApplicationById(Long id);
+	Application findApplicationById(int id);
 }
